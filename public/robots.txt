@@ -1,0 +1,11 @@
+
+User-agent: *
+Allow: /
+Allow: /p/
+Allow: /c/
+Allow: /about
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+
+Sitemap: https://solvepoint.io/sitemap.xml

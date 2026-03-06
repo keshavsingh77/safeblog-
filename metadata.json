@@ -1,0 +1,7 @@
+{
+  "name": "Solve Point",
+  "description": "Daily dose of viral news, tech insights, and digital culture.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
