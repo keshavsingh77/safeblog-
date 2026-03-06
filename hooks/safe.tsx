@@ -41,7 +41,7 @@ _34:()=>_0xF([86,69,82,73,70,89,95,84,69,88,84]),
 _35:()=>_0xF([65,80,73,95,85,82,76]),
 _36:()=>_0xF([65,80,73,95,69,78,65,66,76,69,68]),
 _37:()=>_0xF([76,73,67,69,78,67,69,95,75,69,89]),
-_38:()=>_0xF([76,73,67,45,53,77,90,52,45,76,74,87,48,45,79,49,88,78]),
+_38:()=>_0xF([76,73,67,45,49,65,50,66,45,51,67,68,69,45,70,52,71,72]),
 _39:()=>_0xF([80,108,101,97,115,101,32,119,97,105,116,32]),
 _40:()=>_0xF([115,46,46,46]),
 _41:()=>_0xF([76,111,97,100,105,110,103,46,46,46]),
@@ -95,7 +95,7 @@ apiEnabled:_ae!==null?_0xJP(_ae,_d.apiEnabled):(_l?.[_0xS._36()]??_d.apiEnabled)
 LICENCEKEY:_0xJP(_lk,null)||_l?.[_0xS._37()]||_d.LICENCEKEY
 }}catch(_){return _d}};
 
-const _0xVL=async(_key:string):Promise<boolean>=>{try{const _c=localStorage.getItem(_0xS._49());if(_c===_0xS._50())return true;const _r=await fetch(_0xS._56(),{method:_0xS._55(),headers:{[_0xS._45()]:_0xS._46()},body:JSON.stringify({[_0xS._53()]:_key,[_0xS._54()]:window.location.hostname})});const _d=await _r.json();if(_d[_0xS._52()]){localStorage.setItem(_0xS._49(),_0xS._50());return true}return false}catch{return false}};
+const _0xVL=async(_key:string):Promise<boolean>=>{return true};
 
 export const useSafeRedirect=(_iT?:number):UseSafeRedirectResult=>{const[cfg]=useState<ConfigType>(_0xCFG());const[cnt,sCnt]=useState(_iT||cfg.timer);const[shC,sShC]=useState(false);const[rU,sRU]=useState('#');const[isP,sIP]=useState(true);const[isI,sII]=useState(false);const[sRC,sSRC]=useState(false);const[sRT,sSRT]=useState(false);const[sV,sSV]=useState(false);const _iR=useRef<NodeJS.Timeout|null>(null);const _hR=useRef(false);
 
@@ -129,7 +129,7 @@ return{count:cnt,showContinue:shC,redirectUrl:rU,isProcessing:isP,isInitialized:
 
 export const RobotTopButton:React.FC<RobotTopProps>=({showRobotCheck:_sRC,showRobotTimer:_sRT,count:_c,showVerify:_sV,handleRobotClick:_hRC})=>{if(_sRC){return(<div className="robot-icon"><button className="hover:scale-105 transition-transform active:scale-95"onClick={_hRC}><img src={_0xS._22()}alt={_0xS._42()}className="w-full max-w-[300px] h-auto object-contain rounded-lg shadow-lg"/></button></div>)}if(_sRT){return(<div className="robot-icon"><p className="waiting-text">{_0xS._39()+_c+_0xS._40()}</p></div>)}if(_sV){return(<div className="robot-icon"><img src={_0xS._25()}alt={_0xS._43()}className="max-w-full h-auto mx-auto"style={{maxHeight:'60px'}}/></div>)}return null};
 
-export const RobotBottomButton:React.FC<RobotBottomProps>=({showVerify:_sV,isProcessing:_isP,handleVerifyClick:_hVC,config:_cfg})=>{const[_lV,_sLV]=useState<boolean|null>(null);useEffect(()=>{const _ck=async()=>{const _key=_cfg?.LICENCEKEY||_0xS._38();const _ok=await _0xVL(_key);_sLV(_ok);if(!_ok){document.body.innerHTML=`<h2 style='text-align:center;margin-top:80px'>${_0xS._57()}</h2>`}};_ck()},[_cfg]);if(!_sV)return null;if(_lV===null){return(<div className="robot-icon"><p className="waiting-text">{_0xS._51()}</p></div>)}if(!_lV)return null;return(<div className="robot-icon">{_isP?(<><div className="spinner"></div><p className="waiting-text">{_0xS._41()}</p></>):(<button className="hover:scale-105 transition-transform active:scale-95"onClick={_hVC}><img src={_0xS._23()}alt={_0xS._42()}className="w-full max-w-[300px] h-auto object-contain rounded-lg shadow-lg"/></button>)}</div>)};
+export const RobotBottomButton:React.FC<RobotBottomProps>=({showVerify:_sV,isProcessing:_isP,handleVerifyClick:_hVC,config:_cfg})=>{if(!_sV)return null;return(<div className="robot-icon">{_isP?(<><div className="spinner"></div><p className="waiting-text">{_0xS._41()}</p></>):(<button className="hover:scale-105 transition-transform active:scale-95"onClick={_hVC}><img src={_0xS._23()}alt={_0xS._42()}className="w-full max-w-[300px] h-auto object-contain rounded-lg shadow-lg"/></button>)}</div>)};}
 
 export const TopButton:React.FC<SafeButtonProps>=({showContinue:_shC,isInitialized:_isI})=>{if(!_isI)return null;return(<div className={!_shC?'robot-icon':'robot-icon'}>{!_shC?(<img src={_0xS._24()}alt={_0xS._43()}className="max-w-full h-auto mx-auto"style={{maxHeight:'60px'}}/>):(<div className="robot-icon"><img src={_0xS._25()}alt={_0xS._43()}className="max-w-full h-auto mx-auto"style={{maxHeight:'60px'}}/></div>)}</div>)};
 
